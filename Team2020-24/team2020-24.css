@@ -1,0 +1,133 @@
+.edge * {
+    box-sizing: border-box;
+  }
+  
+  .edge {
+    font-family: "raleway";
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  
+  .grid-container {
+    width: 95%;
+    /* max-width: 1170px; */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+  
+  @media (min-width: 52em) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    }
+  }
+  
+  .our-team {
+    color: #0b2027;
+    padding: 5em 0;
+  }
+  
+  .team-description {
+    grid-column: span 2;
+  }
+
+  .info{
+    text-align: center;
+  }
+
+  .info h2{
+    font-weight: bold;
+  }
+
+  .info i{
+    font-size: 20px;
+  }
+  .info a{
+    /* text-decoration: none; */
+    color: #0b2027;
+  }
+
+  .info h3,p,i{
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+
+  }
+  
+  @media (min-width: 52em) {
+    .team-description {
+      grid-column: auto;
+      grid-row: span 3;
+      align-self: center;
+    }
+  }
+  
+  .team-title{
+    text-transform: uppercase;
+    font-weight: 300px;
+    font-size: 4em;
+    line-height: 1;
+    margin-top:0;
+    margin: 0; /* Reset all margins */
+    margin-left: -20px;
+  }
+  
+  .ptag{
+    margin: 0; /* Reset all margins */
+    margin-left: -20px;
+  }
+  
+  .team-title span{
+    display: block;
+    font-weight: 900;
+  }
+  
+  .team-member{
+    margin: 0;
+    padding: 0;
+    position:relative;
+  }
+  
+  .team-member img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+  }
+  
+  .team-member figurecaption{
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left:14%;
+    right:14%;
+    background: #251e1c55;
+    text-align:center;
+    justify-items: center;
+    border-radius:50%;
+    color:#fff;
+    display: none;
+    transition: transform 0.5s;
+  }
+  
+  
+
+
+  @media (max-width: 767px) {
+    .our-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .grid-container {
+      width: 100%;
+    }
+    .team-description {
+      margin: 20px 0;
+    }
+    .info {
+      width: 100%;
+    }
+  }
